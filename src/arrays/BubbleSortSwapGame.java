@@ -1,4 +1,4 @@
-import java.util.Arrays;
+package arrays;
 
 public class BubbleSortSwapGame {
     public static void main(String[] args) {

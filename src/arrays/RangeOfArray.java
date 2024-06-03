@@ -1,3 +1,5 @@
+package arrays;
+
 /**
  * Given an unsorted array arr of n non-negative integers, you have to find the range of an array. The range of an array is the difference between the maximum and minimum value of the array. If a single value is present return 0.
  *

@@ -1,3 +1,5 @@
+package strings;
+
 /**
  * A sentence is a list of words that are separated by a single space with no leading or trailing spaces. Each of the words consists of only uppercase and lowercase English letters (no punctuation).
  *
