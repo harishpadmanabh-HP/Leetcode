@@ -47,7 +47,7 @@ public class GoalParserInterpretation {
                       i+=2;
                   }else if(input[i+1]=='a'){
                       result.append("al");
-                      i+=3;
+                      i+=4;
                   }
               }
           }
