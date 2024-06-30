@@ -9,25 +9,33 @@ public class BubbleSortSwapGame {
     }
 
     public static String findWinner(int[] Anish, int[] Binish) {
-        int n = Anish.length;
-        int anishSwapped = 0;
-        int binishSwapped = 0;
+        int anishSwaps = countSwaps(Anish);
+        int binishSwaps = countSwaps(Binish);
 
-        for(int i =0;i<n-1;i++){
-            for(int j=0;j<n-i-1;j++){
-                if(Anish[j]>Anish[j+1])
-                    anishSwapped++;
-                if(Binish[j]>Binish[j+1])
-                    binishSwapped++;
+        if (anishSwaps < binishSwaps) {
+            return "Anish";
+        } else if (anishSwaps > binishSwaps) {
+            return "Binish";
+        } else {
+            return "Tie";
+        }
+    }
+    public static int countSwaps(int[] stones) {
+        int swaps = 0;
+        boolean sorted = false;
+        while (!sorted) {
+            sorted = true;
+            for (int i = 0; i < stones.length - 1; i++) {
+                if (stones[i] > stones[i + 1]) {
+                    int temp = stones[i];
+                    stones[i] = stones[i + 1];
+                    stones[i + 1] = temp;
+                    swaps++;
+                    sorted = false;
+                }
             }
         }
-
-        if(anishSwapped==binishSwapped)
-            return "Tie";
-        else if (anishSwapped<binishSwapped)
-            return "Anish";
-        else
-            return "Binish";
+        return swaps;
     }
 
 }
